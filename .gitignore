@@ -1,6 +1,9 @@
-### https://raw.github.com/github/gitignore/df6a05e29979079fcb5d602b4dc260f34383eb92/Global/macOS.gitignore
+/dist
 
-*.DS_Store
+### https://raw.github.com/github/gitignore/982268df04842c9b34b7bdb0c4b0696b7db6e6fd/Global/macOS.gitignore
+
+# General
+.DS_Store
 .AppleDouble
 .LSOverride
 
@@ -27,7 +30,7 @@ Temporary Items
 .apdisk
 
 
-### https://raw.github.com/github/gitignore/df6a05e29979079fcb5d602b4dc260f34383eb92/Node.gitignore
+### https://raw.github.com/github/gitignore/982268df04842c9b34b7bdb0c4b0696b7db6e6fd/Node.gitignore
 
 # Logs
 logs
@@ -60,7 +63,7 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
+# Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
@@ -87,6 +90,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-
-

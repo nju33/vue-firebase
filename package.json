@@ -1,23 +1,40 @@
 {
-  "name": "vue-firebase",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@nju33/vue-firebase",
+  "version": "0.0.0",
+  "main": "./dist/firebase.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev":
+      "NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
+    "build": "webpack --progress --config webpack.config.build.js",
+    "prepare": "yarn build"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "nju33",
+  "license": "MIT",
   "description": "",
   "devDependencies": {
+    "@types/vue": "^2.0.0",
     "awesome-typescript-loader": "^3.2.3",
+    "babel-helper-vue-jsx-merge-props": "^2.0.2",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.5.0",
+    "babel-preset-env": "^1.6.1",
+    "babili-webpack-plugin": "^0.1.2",
+    "firebase-tools": "^3.13.1",
+    "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
+    "superstatic": "^5.0.1",
     "tslint": "^5.8.0",
+    "tslint-config-prettier": "^1.6.0",
     "typescript": "^2.5.3",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
+    "@google-cloud/firestore": "^0.8.2",
     "firebase": "^4.6.0",
     "vue": "^2.5.2",
     "vue-class-component": "^6.0.0"
