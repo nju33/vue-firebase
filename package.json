@@ -1,13 +1,12 @@
 {
   "name": "@nju33/vue-firebase",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./dist/firebase.js",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "dev":
-      "NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
+    "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --progress --config webpack.config.build.js",
     "prepare": "yarn build"
   },
