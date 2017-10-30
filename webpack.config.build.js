@@ -1,5 +1,8 @@
 const {DefinePlugin} = require('webpack');
-const {CheckerPlugin} = require('awesome-typescript-loader');
+const {
+  CheckerPlugin,
+  TsConfigPathsPlugin,
+} = require('awesome-typescript-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BabiliWebpackPlugin = require('babili-webpack-plugin');
 
@@ -38,6 +41,12 @@ module.exports = {
     ],
   },
   plugins: [
+    new TsConfigPathsPlugin({
+      context: __dirname,
+      tsconfig: __dirname + '/tsconfig.build.json',
+      configFileName: 'tsconfig.build.json',
+      compiler: 'typescript',
+    }),
     new CheckerPlugin(),
     new DefinePlugin({
       'process.env': {

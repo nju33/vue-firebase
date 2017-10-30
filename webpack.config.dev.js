@@ -1,5 +1,8 @@
 const {DefinePlugin} = require('webpack');
-const {CheckerPlugin} = require('awesome-typescript-loader');
+const {
+  CheckerPlugin,
+  TsConfigPathsPlugin,
+} = require('awesome-typescript-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const firebaseToolsConfig = require('firebase-tools/lib/config');
 const superstatic = require('superstatic');
@@ -50,6 +53,10 @@ module.exports = {
     },
   },
   plugins: [
+    new TsConfigPathsPlugin({
+      configFileName: 'tsconfig.dev.json',
+      compiler: 'typescript',
+    }),
     new CheckerPlugin(),
     new HtmlWebpackPlugin({
       template: __dirname + '/dev.html',
