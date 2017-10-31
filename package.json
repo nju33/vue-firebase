@@ -7,10 +7,8 @@
     "access": "public"
   },
   "scripts": {
-    "dev":
-      "NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
-    "build":
-      "webpack --progress --config webpack.config.build.js && tsc -p tsconfig.build.json",
+    "dev": "NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
+    "build": "webpack --progress --config webpack.config.build.js && tsc -p tsconfig.build.json",
     "prepare": "yarn build"
   },
   "keywords": [],
@@ -18,7 +16,6 @@
   "license": "MIT",
   "description": "",
   "devDependencies": {
-    "@types/es6-promise": "^0.0.33",
     "@types/vue": "^2.0.0",
     "awesome-typescript-loader": "^3.2.3",
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
@@ -37,7 +34,6 @@
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
-    "@google-cloud/firestore": "^0.8.2",
     "firebase": "^4.6.0",
     "vue": "^2.5.2",
     "vue-class-component": "^6.0.0"
