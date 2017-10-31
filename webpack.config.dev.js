@@ -5,7 +5,6 @@ const firebaseToolsConfig = require('firebase-tools/lib/config');
 const superstatic = require('superstatic');
 
 const firebaseConfig = firebaseToolsConfig.load({cwd: __dirname});
-console.log(firebaseConfig.data.hosting);
 
 module.exports = {
   target: 'web',

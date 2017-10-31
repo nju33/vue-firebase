@@ -5,7 +5,7 @@ const BabiliWebpackPlugin = require('babili-webpack-plugin');
 
 module.exports = {
   target: 'web',
-  devtool: false,
+  devtool: 'source-map',
   entry: __dirname + '/src/components/firebase',
   output: {
     path: __dirname + '/dist',
